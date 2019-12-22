@@ -15,8 +15,14 @@ class AddTodo extends React.Component {
   handleAddTodo = () => {
     // dispatches actions to add todo
     // sets state back to empty string
+
     // zzCmt: zzcore-zzconcept-zzdev-zzlrn-zzinnerworking ((ℹ️ zzpp._51._y19.1222-2030
-    // by "connect", so now you can dispatch actions with this.pros.ACTIONS
+    //  by "connect", so now you can dispatch actions with this.pros.ACTIONS
+
+    //actually this means zzdispatch!
+    //  zzprops is from zzconnect, so this addTodo = dispatch action XXX into store! ((❇️ zzppp._51._y19.1222-2050))
+    //  really think as from zzOUTSIDE the zzcomponent - the zzwrappING component - which is zzSTORE/zzprovider? so this
+    //  "zzprops" is GIVEN by OUTSIDE component - to have super power for wrappED component to do dispatch!
     this.props.addTodo(this.state.input);
     // after click add, of course the inputbox needs to be cleared
     this.setState({ input: "" });
