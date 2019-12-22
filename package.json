@@ -4,11 +4,16 @@
   "description": "Todo App (UI + Unconnected Redux)",
   "keywords": [],
   "main": "src/index.js",
+  "tmy-comment": {
+    "for react-redux": "can not use too new one!"
+  },
   "dependencies": {
     "classnames": "2.2.6",
     "react": "16.4.2",
     "react-dom": "16.4.2",
-    "react-scripts": "1.1.4"
+    "react-redux": "5.0.7",
+    "react-scripts": "1.1.4",
+    "redux": "4.0.4"
   },
   "devDependencies": {},
   "scripts": {
