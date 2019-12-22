@@ -19,6 +19,7 @@ class AddTodo extends React.Component {
     return (
       <div>
         <input
+          //zzCmt: try directly setState for e.target.value for controlled form, works
           onChange={e => {
             this.setState({ input: e.target.value });
           }}
