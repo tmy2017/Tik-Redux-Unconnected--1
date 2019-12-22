@@ -5,9 +5,11 @@ const initialState = {
   byIds: {}
 };
 
+// zzCmt: intrst no name export
 export default function(state = initialState, action) {
   switch (action.type) {
     case ADD_TODO: {
+      //zzCmt: action really "describes" what is happening, but it's reducer to do the zzstate manipulation ((ℹ️ zzpp._51._y19.1222-1953))
       const { id, content } = action.payload;
       return {
         ...state,

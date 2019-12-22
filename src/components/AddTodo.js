@@ -15,6 +15,11 @@ class AddTodo extends React.Component {
   handleAddTodo = () => {
     // dispatches actions to add todo
     // sets state back to empty string
+    // zzCmt: zzcore-zzconcept-zzdev-zzlrn-zzinnerworking ((ℹ️ zzpp._51._y19.1222-2030
+    // by "connect", so now you can dispatch actions with this.pros.ACTIONS
+    this.props.addTodo(this.state.input);
+    // after click add, of course the inputbox needs to be cleared
+    this.setState({ input: "" });
   };
 
   render() {
@@ -22,12 +27,20 @@ class AddTodo extends React.Component {
       <div>
         <input
           //zzCmt: try directly setState for e.target.value for controlled form, works
+          // onChange={e => {
+          //   this.setState({ input: e.target.value });
+          // }}
           onChange={e => {
-            this.setState({ input: e.target.value });
+            this.updateInput(e.target.value);
           }}
           value={this.state.input}
         />
-        <button className="add-todo" onClick={this.handleAddTodo}>
+
+        <button
+          className="add-todo"
+          //zzCmt: so only on button clicked, really dispatch the action! ((ℹ️ zzpp._51._y19.1222-2034 ))
+          onClick={this.handleAddTodo}
+        >
           Add Todo
         </button>
       </div>
