@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { addTodo } from "../redux/actions";
 
 class AddTodo extends React.Component {
   constructor(props) {
@@ -33,4 +35,9 @@ class AddTodo extends React.Component {
   }
 }
 
-export default AddTodo;
+export default connect(
+  null,
+  //zzCmt: mapDispatchToProps - so now I just added "actions", and with connect,
+  //I have "dispatch()" as my this.props to use to fire actions! ((ℹ️ zzpp._51._y19.1222-1703 ))
+  { addTodo }
+)(AddTodo);
